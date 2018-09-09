@@ -38,7 +38,7 @@ Outgoing WebHooks を設定すると、
 
 なお、リクエストの内容は以下のような形です。
 
-```json
+```
 {
   "parameter":{
     "channel_name":"<channel_name>",
