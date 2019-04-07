@@ -1,0 +1,14 @@
+<h1>Samples#page</h1>
+<p>Find me in app/views/samples/page.html.erb</p>
+
+<%= text_field_tag 'date', '', class: 'datepicker' %>
+
+<script>
+  $(function() {
+    $('.datepicker').datepicker({
+      onSelect: function(dateText, _inst) {
+        $(this).val(standardDateToJapaneseDateText(new Date(dateText)));
+      }
+    });
+  });
+</script>
