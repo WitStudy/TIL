@@ -318,24 +318,24 @@ IEを使用している場合、上記の影響でファイルをダウンロー
 
 1. `vim config/application`
 
-```diff
-  module SampleApplication520
-    class Application < Rails::Application
-      # Initialize configuration defaults for originally generated Rails version.
-      config.load_defaults 5.2
+    ```diff
+      module SampleApplication520
+        class Application < Rails::Application
+          # Initialize configuration defaults for originally generated Rails version.
+          config.load_defaults 5.2
 
-      # Settings in config/environments/* take precedence over those specified here.
-      # Application configuration can go into files in config/initializers
-      # -- all .rb files in that directory are automatically loaded after loading
-      # the framework and any gems in your application.
+          # Settings in config/environments/* take precedence over those specified here.
+          # Application configuration can go into files in config/initializers
+          # -- all .rb files in that directory are automatically loaded after loading
+          # the framework and any gems in your application.
 
-      # Don't generate system test files.
-      config.generators.system_tests = nil
-+
-+     config.action_dispatch.default_headers['X-Download-Options'] = nil
-    end
-  end
-```
+          # Don't generate system test files.
+          config.generators.system_tests = nil
+    +
+    +     config.action_dispatch.default_headers['X-Download-Options'] = nil
+        end
+      end
+    ```
 
 1. アプリケーションを起動し、IEでファイルをダウンロードすると、「開く」が可能となっている
 
