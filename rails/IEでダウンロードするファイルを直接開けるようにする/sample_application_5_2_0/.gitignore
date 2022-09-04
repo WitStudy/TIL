@@ -1,9 +1,0 @@
-config/database.yml
-
-log/*
-!log/.keep
-
-tmp/*
-!tmp/.keep
-
-vendor/bundle
